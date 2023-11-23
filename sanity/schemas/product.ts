@@ -33,6 +33,11 @@ export default {
         type: 'number',
       },
       {
+        name: 'quantity',
+        title: 'Quantity',
+        type: 'number',
+      },
+      {
         name: 'price_id',
         title: 'Stripe Price ID',
         type: 'string',

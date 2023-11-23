@@ -20,7 +20,7 @@ export default function ImageGallery({ images }: iAppProps) {
   };
 
   return (
-    <div className="  aspect-square sm:mt-12 h-full  sm:w-[67%] overflow-hidden flex flex-col items-center ">
+    <div className="   sm:mt-12 min-h-full  sm:w-[67%] overflow-hidden flex flex-col items-center ">
           <div className="max-h-[400px] sm:max-h-[550px]">
             <Image
               src={urlFor(bigImage).url()}
@@ -32,8 +32,8 @@ export default function ImageGallery({ images }: iAppProps) {
             />
           </div>
           <div className=" gap-x-2 mt-12 flex justify-center">
-            {images?.map((image: { asset: string }) => (
-              <div className = {cn(" border  border-neutral-800 hover:border-blue-700 rounded-lg flex gap-x-2",{
+            {images?.map((image: { asset: string }, id:number) => (
+              <div key={id} className = {cn(" border  border-neutral-800 hover:border-blue-700 rounded-lg flex gap-x-2",{
                 "border-2 border-blue-600" : image.asset === color
               })}>
                 <Image

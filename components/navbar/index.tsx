@@ -1,9 +1,12 @@
+'use client'
 import React from "react";
 import Search from "./search";
 import { ShoppingCartIcon } from '@heroicons/react/24/outline';
+import { useShoppingCart } from "use-shopping-cart";
 
 
 export default function Navbar() {
+  const { handleCartClick, cartCount} = useShoppingCart()
   const options = [
     {
       id: 1,
@@ -32,7 +35,10 @@ export default function Navbar() {
         ))}
       </div>
       <div className="hidden justify-center md:flex sm:w-1/3 mr-64"><Search/></div>
-      <div className="mt-4 border w-11 h-11 p-3 rounded-lg flex items-center border-neutral-700"><ShoppingCartIcon className="h-4 w-4 text-white "/></div>
+      <div onClick={()=>{handleCartClick()}} className="mt-4 border relative w-11 h-11 p-3 rounded-lg flex items-center border-neutral-700"><div className=" h-4   w-4 rounded-md   mb-10 ml-4 text-white flex items-center text-xs justify-center p-2  text-center bg-blue-600 absolute"
+        
+        
+      >{cartCount}</div><ShoppingCartIcon className="h-4 w-4 text-white "/></div>
 
     </div>
   );

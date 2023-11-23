@@ -16,4 +16,5 @@ export interface simplifiedProduct {
     name: string;
     description: string;
     price_id: string;
+    quantity: number;
   }
