@@ -57,7 +57,7 @@ export default function OptionButton({
     quantity: quantity,
   };
   return (
-    <div className="flex flex-col">
+    <div className="flex  flex-col">
       <h1 className=" mt-5 text-sm">COLOR</h1>
       <div>
         {colors?.map((item) => (
@@ -106,7 +106,7 @@ export default function OptionButton({
         ))}
         {/* <div className="mb-6 text-sm leading-tight dark:text-white/[60%]">{data?.description}</div>  */}
       </div>
-      <div className="mb-6 text-sm mx-5 sm:mx-0 overflow-hidden mr-5  line-clamp-2 w-96 mt-10 leading-tight dark:text-white/[60%]">
+      <div className="mb-6 text-sm mx-5 sm:mx-0 overflow-hidden   line-clamp-2 sm:max-w-[350px]  mt-10 leading-tight dark:text-white/[60%]">
         {description}
       </div>
       <div
@@ -115,7 +115,7 @@ export default function OptionButton({
           handleCartClick();
         }}
         className={cn(
-          "rounded-full mx-5 sm:mx-0 bg-blue-600 cursor-pointer hover:bg-blue-700 text-center p-3  ",
+          "rounded-full   bg-blue-600  sm:mx-0 cursor-pointer hover:bg-blue-700 text-center p-3  ",
           {
             "cursor-not-allowed opacity-60 hover:opacity-60": !clicked1,
             "cursor-not-allowed opacity-60 hover:opacity-60 rounded-full":

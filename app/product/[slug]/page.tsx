@@ -39,7 +39,7 @@ export default async function Product({
   return (
     <div className=" bg-neutral-900 min-h-screen w-full pl-1 flex pt-3 flex-col sm:flex-row  sm:justify-center ">
       <div className=" w-full flex flex-col  items-center ">
-        <div className=" bg-black w-[90%] overflow-hidden  rounded-lg relative border  border-neutral-800 min-h-[81vh] sm:h-[81vh] flex flex-col sm:flex-row ">
+        <div className=" bg-black w-[90%] sm:p-4 sm:pr-6 overflow-hidden  rounded-lg relative border  border-neutral-800 min-h-[81vh]  flex flex-col sm:flex-row ">
           <ImageGallery images={data.images} />
           <div className="flex flex-col text-white ">
             <div className=" text-white text-3xl ml-5 sm:ml-0 sm:text-start  sm:text-5xl mt-16 font-medium ">
@@ -49,7 +49,7 @@ export default async function Product({
               {`$${data?.price}.00 USD`}
             </div>
             <div className="bg-neutral-700 h-[1px] mt-6  sm:mr-2 mx-5 sm:mx-0"></div>
-            <div className="ml-5 sm:ml-0 mt-3">
+            <div className="ml-5 mr-4 sm:ml-0 mt-3">
               <OptionButton
                 currency="USD"
                 description={data?.description}

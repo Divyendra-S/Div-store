@@ -36,13 +36,13 @@ export default function ShoppingCartModal() {
   };
 
   return (
-    <Sheet
+    <Sheet 
       open={shouldDisplayCart}
       onOpenChange={() => {
         handleCartClick();
       }}
     >
-      <SheetContent className="bg-black border-l border-neutral-800">
+      <SheetContent className="bg-black w-full sm:w-[900px] border-l border-neutral-800">
         <SheetHeader></SheetHeader>
         <div className=" flex justify-between items-center">
           <div className="text-white font-medium text-xl">My Cart</div>
