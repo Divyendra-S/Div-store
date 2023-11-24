@@ -3,6 +3,7 @@ import React from "react";
 import Search from "./search";
 import { ShoppingCartIcon } from '@heroicons/react/24/outline';
 import { useShoppingCart } from "use-shopping-cart";
+import Link from "next/link";
 
 
 export default function Navbar() {
@@ -11,17 +12,17 @@ export default function Navbar() {
     {
       id: 1,
       name: "All",
-      link : "/all",
+      link : "/All",
     },
     {
       id : 2,
       name : "Shirts",
-      link: "/shirts",
+      link: "/Shirts",
     },
     {
       id: 3,
       name: "Stickers",
-      link: "/stickers",
+      link: "/Stickers",
     }
   ]
 
@@ -29,9 +30,9 @@ export default function Navbar() {
   return (
     <div className="flex bg-neutral-900 justify-between pr-5">
       <div className="flex bg-neutral-900 p-4 pt-7">
-        <span className=" text-white font-medium text-xs sm:text-sm ml-5 md:hidden lg:block">DIV/STORE.</span>
+        <Link href={`/`} className=" text-white font-medium text-xs sm:text-sm ml-5 md:hidden lg:block">DIV/STORE.</Link>
         {options?.map((option)=>(
-          <span key={option.id} className=" flex ml-6 text-xs text-neutral-400 sm:text-sm">{option?.name}</span>
+          <Link href={`${option.link}`} key={option.id} className=" flex ml-6 text-xs text-neutral-400 sm:text-sm">{option?.name}</Link>
         ))}
       </div>
       <div className="hidden justify-center md:flex sm:w-1/3 mr-64"><Search/></div>
