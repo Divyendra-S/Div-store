@@ -3,6 +3,7 @@ import Image from "next/image";
 import React from "react";
 import GridTileImage from "./grid/tile";
 import Label from "./label";
+import Link from "next/link";
 
 export default async function Carousel() {
   async function getData() {
@@ -29,14 +30,14 @@ export default async function Carousel() {
           <div
             className=" relative h-[300px] w-[300px] overflow-hidden flex-shrink-0 sm:w-[450px] flex items-center justify-center border border-neutral-700 bg-black rounded-lg"
             key={id}
-          >
+          ><Link href={`/product/${data.slug}`}>
             <Image
               src={data.imageUrl}
               alt="product"
               width={300}
               height={300}
               sizes="(min-width: 768px) 66vw, 100vw"
-            />
+            /></Link>
             <Label label={{title: `${data.name}`,
                   amount: data.price,
                   position: "bottom",}} />
