@@ -58,7 +58,7 @@ function ThreeGridItem({
           position: position,
         }}
           src={urlFor(item).url()}
-          alt={item.asset._ref}
+          alt='product'
           fill
           sizes={
             position === "center"

@@ -18,7 +18,7 @@ export default function Footer() {
         <div className=" mb-4">
         <Link href={`/`} className=" mt-2 ml-2  text-white font-medium text-sm sm:text-sm sm:ml-5 md:mb-0 mb-8">DIV/STORE.</Link>
         </div>
-          <div className="flex flex-col" >{details.map((item)=>(<div className='block p-2 text-lg underline-offset-4 text-neutral-400 hover:underline hover:text-neutral-300 md:inline-block md:text-sm'>{item}</div>))}</div>
+          <div className="flex flex-col" >{details.map((item, id)=>(<div key={id} className='block p-2 text-lg underline-offset-4 text-neutral-400 hover:underline hover:text-neutral-300 md:inline-block md:text-sm'>{item}</div>))}</div>
         </div>
         <div className="md:ml-auto mt-4 sm:mt-0 ml-1 ">
           <a

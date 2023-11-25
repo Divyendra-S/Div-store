@@ -25,6 +25,7 @@ export default function GridTileImage({
     >
       {props.src ? (
         <Image
+        
           className=" transition ease-in-out duration-200 group-hover:scale-105 relative h-full w-full"
           {...props}
         />
