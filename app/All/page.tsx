@@ -19,6 +19,8 @@ async function getData() {
 import React from "react";
 import Link from "next/link";
 import GridTileImage from "@/components/grid/tile";
+import { Dropdown } from "@/components/Dropdown";
+import DropdownButton from "@/components/DropdownButton";
 
 export default async function Category({
   params,
@@ -199,9 +201,9 @@ export default async function Category({
     },
   ];
   return (
-    <div className=" min-h-screen">
-      <div className="flex flex-col sm:flex-row min-h-screen">
-        <div className=" order-1 w-[125px] gap-y-2 text-sm sm:ml-24 pt-4 flex flex-col text-white  ">
+    <div className=" min-h-screen ">
+      <div className="flex items-center sm:items-start flex-col sm:flex-row min-h-screen">
+        <div className=" order-1 hidden sm:flex w-[125px] gap-y-2 text-sm sm:ml-24 pt-4  flex-col text-white  ">
           <div className=" text-neutral-400 text-xs">Collections</div>
           {choices.map((item: any, id: number) => (
             <div key={id}>
@@ -209,6 +211,8 @@ export default async function Category({
             </div>
           ))}
         </div>
+        <div className=" w-full px-5 mt-4 sm:hidden"><DropdownButton/></div>
+        
         <div className=" order-3 sm:order-2 px-5 lg:mx-8 w-full  mt-3 grid grid-flow-row gap-4 sm:grid-cols-2 lg:grid-cols-3 grid-cols-1 ">
           {data.map((item: any, id: number) => (
             <Link

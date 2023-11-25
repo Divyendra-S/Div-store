@@ -50,7 +50,7 @@ export default function ShoppingCartModal() {
             onClick={() => {
               handleCartClick();
             }}
-            className="text-white flex border  border-neutral-700 rounded-xl p-2 "
+            className="text-white flex border cursor-pointer  border-neutral-700 rounded-xl p-2 "
           >
             <XMarkIcon className=" h-6" />
           </div>
@@ -73,7 +73,7 @@ export default function ShoppingCartModal() {
                               }}
                               className=" absolute -mt-2 bg-neutral-600 ml-[55px] rounded-full"
                             >
-                              <XMarkIcon className="hover:text-accent-3 mx-[1px] h-4 w-4  text-black" />
+                              <XMarkIcon className="hover:text-accent-3 mx-[1px] cursor-pointer h-4 w-4  text-black" />
                             </div>
                             <Image
                               src={item.image as string}
@@ -94,14 +94,14 @@ export default function ShoppingCartModal() {
                               onClick={() => {
                                 incrementItem(item.id);
                               }}
-                              className="h-4 w-4 dark:text-neutral-500"
+                              className="h-4 w-4 cursor-pointer dark:text-neutral-500"
                             />
                             {item.quantity}
                             <MinusIcon
                               onClick={() => {
                                 decrementItem(item.id);
                               }}
-                              className="h-4 w-4 dark:text-neutral-500"
+                              className="h-4 w-4 cursor-pointer dark:text-neutral-500"
                             />
                           </div>
                         </div>

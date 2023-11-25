@@ -36,7 +36,7 @@ export default function Navbar() {
         ))}
       </div>
       <div className="hidden justify-center md:flex sm:w-1/3 mr-64"><Search/></div>
-      <div onClick={()=>{handleCartClick()}} className="mt-4 border relative w-11 h-11 p-3 rounded-lg flex items-center border-neutral-700"><div className=" h-4   w-4 rounded-md   mb-10 ml-4 text-white flex items-center text-xs justify-center p-2  text-center bg-blue-600 absolute"
+      <div onClick={()=>{handleCartClick()}} className="mt-4 border cursor-pointer relative w-11 h-11 p-3 rounded-lg flex items-center border-neutral-700"><div className=" h-4   w-4 rounded-md   mb-10 ml-4 text-white flex items-center text-xs justify-center p-2  text-center bg-blue-600 absolute"
         
         
       >{cartCount}</div><ShoppingCartIcon className="h-4 w-4 text-white "/></div>
